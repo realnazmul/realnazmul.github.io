@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <link rel="icon" href="avatar.png" type="image/x-icon">
+    <title>Nazmul Hossain | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <!-- Animated background orbs -->
+    <div class="bg-orbs" aria-hidden="true">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+        <div class="bg-orb bg-orb-4"></div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <h1 class="logo">Nazmul Hossain</h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="theme-switch">
+                <span class="theme-label">Light Mode</span>
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-nav">
+        <a href="#about" class="mobile-link active">
+            <i class="fa-solid fa-user"></i>
+            <span>About</span>
+        </a>
+        <a href="#education" class="mobile-link">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Education</span>
+        </a>
+        <a href="#skills" class="mobile-link">
+            <i class="fa-solid fa-code"></i>
+            <span>Skills</span>
+        </a>
+        <a href="#projects" class="mobile-link">
+            <i class="fa-solid fa-folder"></i>
+            <span>Projects</span>
+        </a>
+        <a href="#contact" class="mobile-link">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </nav>
+
+
+
+    <main>
+
+        <!-- Hero / About -->
+        <section id="about" class="section hero">
+            <div class="hero-left glass profile-card">
+
+                <div class="avatar">
+                    <img src="avatar.png" alt="Avatar of Nazmul Hossain">
+                </div>
+
+                <h2 class="profile-name">Nazmul Hossain</h2>
+
+                <span class="profile-role">CS (Cyber Security) · Goldsmiths</span>
+
+                <div class="socials profile-socials">
+                    <a href="mailto:nhoss004@gold.ac.uk" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://github.com/realnazmul" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/realnazmul" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+
+            </div>
+
+
+            <div class="hero-right glass">
+                <h3>About Me</h3>
+                <p>
+                    I am a Computer Science (Cyber Security) student at Goldsmiths, University of London,
+                    and Campus Ambassador for the university. I am passionate about front-end web development,
+                    cybersecurity, and building accessible, modern digital experiences that combine technical
+                    precision with exceptional user experience.
+                </p>
+                <br>
+                <p>
+                    I achieved a Triple Distinction* (D*D*D) — the highest possible BTEC grade — across all
+                    13 units of my IT qualification at New City College, placing in the top national tier.
+                    My experience spans cybersecurity awareness delivery, peer mentoring, community digital
+                    support, and student leadership. I am bilingual in English and Bengali.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-number">D*D*D</span>
+                        <span class="stat-label">Top National Grade</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Roles &amp; Projects</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Languages</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Education -->
+        <section id="education" class="section">
+            <h2 class="section-title">Education</h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Sep 2025 — Present</span>
+                            <span class="timeline-badge">Current</span>
+                        </div>
+                        <h3>BSc Computer Science (Cyber Security)</h3>
+                        <p class="timeline-org">Goldsmiths, University of London</p>
+                        <p class="timeline-desc">Specialising in Cyber Security with a focus on secure systems, ethical hacking principles, modern web security, and full-stack development. Simultaneously serving as Campus Ambassador for the university.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Sep 2023 — Aug 2025</span>
+                            <span class="timeline-badge achievement">D*D*D</span>
+                        </div>
+                        <h3>BTEC National Extended Diploma in IT</h3>
+                        <p class="timeline-org">New City College, London</p>
+                        <p class="timeline-desc">Achieved Triple Distinction* — the highest possible grade — across all 13 units, placing in the top national tier. Key units: Cyber Security &amp; Incident Management, Big Data Analytics, Programming, Website Development, IT Project Management, Cloud Storage &amp; Collaboration Tools, Data Modelling, 2D/3D Digital Graphics.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Sep 2019 — Aug 2023</span>
+                        </div>
+                        <h3>GCSEs</h3>
+                        <p class="timeline-org">Rokeby School, London</p>
+                        <p class="timeline-desc">Bengali Grade 9 — the highest possible grade, reflecting exceptional bilingual ability. Core subjects: Maths, English Language, Computer Science, Combined Science, and Design Technology.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Experience -->
+        <section id="experience" class="section">
+            <h2 class="section-title">Experience</h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Apr 2026 — Present</span>
+                            <span class="timeline-badge">Current</span>
+                        </div>
+                        <h3>Campus Ambassador</h3>
+                        <p class="timeline-org">Goldsmiths, University of London</p>
+                        <ul class="timeline-list">
+                            <li>Representing Goldsmiths at university fairs, open days, and outreach events, promoting programmes and values to prospective students.</li>
+                            <li>Supporting the planning and delivery of key university events as a trusted point of contact between the university and its prospective student community.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Sep 2023 — Aug 2025</span>
+                        </div>
+                        <h3>Student Ambassador &amp; Digital Champion</h3>
+                        <p class="timeline-org">New City College, London</p>
+                        <ul class="timeline-list">
+                            <li>Delivered cybersecurity and digital safety awareness sessions on safe online practices, scam recognition, phishing, and responsible internet usage.</li>
+                            <li>Provided hands-on IT support at open evenings — troubleshooting system access, login issues, and device problems.</li>
+                            <li>Managed high volumes of student and visitor enquiries, maintaining professionalism and efficiency throughout.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Sep 2023 — Aug 2025</span>
+                        </div>
+                        <h3>Community Digital Support Volunteer</h3>
+                        <p class="timeline-org">Splash Community Trust, London</p>
+                        <ul class="timeline-list">
+                            <li>Provided one-to-one digital support sessions to elderly community members — teaching safe use of technology, VR headsets, and online platforms.</li>
+                            <li>Educated participants on cybersecurity risks including online scams, identity theft, phishing, and digital fraud.</li>
+                            <li>Attended weekly sessions consistently for two consecutive years alongside full-time academic study.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Sep 2023 — Aug 2025</span>
+                        </div>
+                        <h3>Peer Mentor</h3>
+                        <p class="timeline-org">New City College, London</p>
+                        <ul class="timeline-list">
+                            <li>Mentored first-year IT students across programming, cybersecurity, data modelling, and web development modules.</li>
+                            <li>Adapted teaching style to individual learning needs, fostering confidence and measurable academic progress.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-card glass reveal">
+                    <span class="skill-name">HTML5</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="90">90%</div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass reveal">
+                    <span class="skill-name">CSS3</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="85">85%</div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass reveal">
+                    <span class="skill-name">JavaScript</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="20">20%</div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass reveal">
+                    <span class="skill-name">Python</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="45">45%</div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass reveal">
+                    <span class="skill-name">Cybersecurity</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="68">68%</div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass reveal">
+                    <span class="skill-name">Responsive Design</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="80">80%</div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass reveal">
+                    <span class="skill-name">Git &amp; GitHub</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="75">75%</div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass reveal">
+                    <span class="skill-name">Excel &amp; Data Analysis</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="70">70%</div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass reveal">
+                    <span class="skill-name">Adobe Photoshop</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="60">60%</div>
+                    </div>
+                </div>
+
+                <div class="skill-card glass reveal">
+                    <span class="skill-name">Data Modelling</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="55">55%</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Achievements -->
+        <section id="achievements" class="section">
+            <h2 class="section-title">Achievements</h2>
+
+            <div class="achievements-grid">
+
+                <div class="achievement-card glass reveal">
+                    <div class="achievement-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div class="achievement-body">
+                        <h3>Triple Distinction* (D*D*D)</h3>
+                        <p class="achievement-sub">BTEC National Extended Diploma in IT · 2025</p>
+                        <p>Highest possible grade across all 13 units — placing in the top national tier of students nationwide, demonstrating outstanding academic consistency and technical capability.</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card glass reveal">
+                    <div class="achievement-icon">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <div class="achievement-body">
+                        <h3>Student Ambassador Recognition</h3>
+                        <p class="achievement-sub">New City College, London · 2023 – 2025</p>
+                        <p>Recognised for two consecutive years for outstanding service, professionalism, and contribution to the college community across student support, events, and IT initiatives.</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card glass reveal">
+                    <div class="achievement-icon">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <div class="achievement-body">
+                        <h3>Campus Ambassador — Goldsmiths</h3>
+                        <p class="achievement-sub">Goldsmiths, University of London · 2026</p>
+                        <p>Selected to officially represent Goldsmiths at university fairs, open days, and national outreach events — chosen from the student body to serve as a trusted face of the institution.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="projects-row">
+                <article class="project-card glass reveal">
+                    <div class="project-img-wrap">
+                        <img src="./img/1.PNG" alt="Screenshot of sports community website project" class="project-img" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Sports Community Website</h3>
+                        <p>
+                            A multi-page responsive website designed for a children's sports
+                            community, featuring event listings and membership information.
+                        </p>
+                        <a href="http://doc.gold.ac.uk/~nhoss004/tinsports/" class="btn-primary" target="_blank"
+                            rel="noopener noreferrer">
+                            Learn More
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card glass reveal">
+                    <div class="project-img-wrap">
+                        <img src="./img/2.PNG" alt="Screenshot of Web service Website website project" class="project-img" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3>Web service Website</h3>
+                        <p>
+                            Responsive personal Web service Website built using HTML, CSS, and JavaScript,
+                            focusing on accessibility and modern UI design.
+                        </p>
+                        <a href="https://nazmul-ncc.github.io/" class="btn-primary" target="_blank"
+                            rel="noopener noreferrer">
+                            Learn More
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card glass reveal">
+                    <div class="project-img-wrap">
+                        <img src="./img/3.PNG" alt="Screenshot of JavaScript mini proxy project" class="project-img" loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h3>JavaScript Mini Proxy</h3>
+                        <p>
+                            A mini proxy script developed using JavaScript using node.js framework to bypass restrictions.
+                        </p>
+                        <a href="https://github.com/nazhoss/cros-vercel" class="btn-primary" target="_blank"
+                            rel="noopener noreferrer">
+                            Learn More
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Contact</h2>
+
+            <!-- Map -->
+            <div class="map-box glass reveal">
+                <iframe title="Map showing London, United Kingdom"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.58519602238!2d-0.2664050245106186!3d51.52852620113952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon!5e0!3m2!1sen!2suk!4v1765793556221!5m2!1sen!2suk"
+                    allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-box glass reveal">
+
+                <div class="contact-form-header">
+                    <h3>Send a Message</h3>
+                    <p>I typically respond within 24 hours.</p>
+                </div>
+
+                <form id="contactForm">
+                    <!-- Web3Forms — replace YOUR_ACCESS_KEY with key from web3forms.com/your-email -->
+                    <input type="hidden" name="access_key" value="516175b5-bf46-4e8d-af31-2be266d9811d">
+                    <input type="hidden" name="subject"   value="New message from portfolio">
+                    <input type="hidden" name="from_name" value="Portfolio Contact">
+                    <input type="hidden" name="replyto"   value="nhoss004@gold.ac.uk">
+                    <input type="hidden" name="redirect"  value="false">
+                    <input type="checkbox" name="botcheck" style="display:none">
+
+                    <div class="form-row">
+                        <div class="field-group">
+                            <label for="contactName">Name</label>
+                            <div class="field-wrap">
+                                <i class="fa-solid fa-user field-icon"></i>
+                                <input id="contactName" name="name" type="text" placeholder="Your full name" required>
+                            </div>
+                        </div>
+                        <div class="field-group">
+                            <label for="contactEmail">Email</label>
+                            <div class="field-wrap">
+                                <i class="fa-solid fa-envelope field-icon"></i>
+                                <input id="contactEmail" name="email" type="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" name="message" placeholder="Tell me what&#39;s on your mind…"></textarea>
+                    </div>
+
+                    <div class="form-footer">
+                        <span class="form-note">All fields are required.</span>
+                        <button type="submit" class="btn-primary btn-send">
+                            Send Message <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section id="newsletter" class="section">
+            <h2 class="section-title">Newsletter</h2>
+
+            <div class="newsletter-box glass reveal">
+                <p class="newsletter-text">
+                    Subscribe to receive updates about my latest projects and learning journey.
+                </p>
+            </br>
+                <form id="newsletterForm" class="newsletter-form">
+                    <input type="email" id="newsletterEmail" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+
+                <p id="newsletterMessage" class="newsletter-message"></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 Nazmul Hossain |  All rights reserved.</p>
+
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
