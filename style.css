@@ -51,6 +51,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 60px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -62,6 +63,12 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    animation: page-enter 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes page-enter {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 /* Smooth theme transitions */
@@ -69,9 +76,20 @@ body,
 .header,
 .footer,
 .glass,
-.mobile-nav {
-    transition: background 0.4s ease, color 0.4s ease,
-                border-color 0.4s ease, box-shadow 0.4s ease;
+.mobile-nav,
+.section-title,
+.timeline-marker,
+.skill-bar,
+.slider,
+.socials a,
+.btn-primary,
+input, textarea {
+    transition:
+        background     0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        color          0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        border-color   0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        box-shadow     0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* ============================================================
@@ -193,7 +211,7 @@ body,
     font-size: 14px;
     font-weight: 400;
     letter-spacing: -0.01em;
-    transition: color 0.2s ease;
+    transition: color 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
 }
 
@@ -291,14 +309,16 @@ input:checked + .slider::before {
    ============================================================ */
 .reveal {
     opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(32px) scale(0.97);
+    transition:
+        opacity   0.85s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
 }
 
 .reveal.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
 /* Staggered delays for skill cards */
@@ -396,7 +416,12 @@ input:checked + .slider::before {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.08);
     text-decoration: none;
-    transition: all 0.22s ease;
+    transition:
+        color      0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        box-shadow 0.3s  cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform  0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform;
 }
 
 .socials a:hover {
@@ -404,6 +429,11 @@ input:checked + .slider::before {
     background: rgba(255, 255, 255, 0.11);
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.socials a:active {
+    transform: translateY(-1px) scale(0.94);
+    transition-duration: 0.1s;
 }
 
 .hero-right h3 {
@@ -434,9 +464,12 @@ input:checked + .slider::before {
     display: flex;
     flex-direction: column;
     gap: 14px;
-    transition: background 0.3s ease, box-shadow 0.3s ease,
-                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    transition:
+        background 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform  0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity    0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
 }
 
 .skill-card:hover {
@@ -446,6 +479,11 @@ input:checked + .slider::before {
         inset 0 1px 0 var(--glass-shine),
         0 32px 64px rgba(0, 0, 0, 0.5),
         0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.skill-card:active {
+    transform: translateY(-1px) scale(0.98);
+    transition-duration: 0.1s;
 }
 
 .skill-name {
@@ -486,9 +524,11 @@ input:checked + .slider::before {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-                box-shadow 0.45s ease,
-                opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    transition:
+        transform  0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        opacity    0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
 }
 
 .project-card:hover {
@@ -497,6 +537,11 @@ input:checked + .slider::before {
         inset 0 1px 0 var(--glass-shine),
         0 48px 96px rgba(0, 0, 0, 0.55),
         0 10px 28px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:active {
+    transform: translateY(-4px) scale(0.99);
+    transition-duration: 0.1s;
 }
 
 .project-img-wrap {
@@ -565,10 +610,11 @@ input:checked + .slider::before {
     background: var(--accent);
     box-shadow: 0 0 0 0 transparent;
     transition:
-        background 0.18s ease,
-        box-shadow 0.18s ease,
-        transform  0.18s cubic-bezier(0.16, 1, 0.3, 1),
-        opacity    0.18s ease;
+        background 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        box-shadow 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform  0.3s  cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity    0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
 }
 
 .btn-primary:hover {
@@ -607,7 +653,9 @@ input:checked + .slider::before {
     border-radius: var(--radius-lg);
     display: block;
     filter: grayscale(100%) contrast(1.05) brightness(0.65);
-    transition: filter 0.6s ease, transform 0.6s ease;
+    transition:
+        filter    0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .map-box:hover iframe {
@@ -937,6 +985,9 @@ textarea {
     .mobile-link.active     { color: rgba(255, 255, 255, 0.95); }
     .mobile-link.active i   { color: var(--accent); transform: scale(1.07); }
 
+    .mobile-link:active i   { transform: scale(0.88); transition-duration: 0.1s; }
+    .mobile-link.active:active i { transform: scale(0.95); }
+
     .nav-links { display: none; }
     body { padding-bottom: 108px; }
 }
@@ -1118,6 +1169,9 @@ body.light-mode .footer-nav a:hover {
     .bg-orb {
         animation: none;
     }
+    body {
+        animation: none;
+    }
     .reveal {
         transition: none;
         opacity: 1;
@@ -1129,6 +1183,76 @@ body.light-mode .footer-nav a:hover {
     * {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================================
+   ACCESSIBILITY — reduced transparency
+   Frost the glass: raise background opacity, drop the blur.
+   ============================================================ */
+@media (prefers-reduced-transparency: reduce) {
+    .glass,
+    .header,
+    .footer,
+    .map-box,
+    input,
+    textarea {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    .glass          { background: rgba(28, 28, 32, 0.97); }
+    .header         { background: rgba(0, 0, 0, 0.96); }
+    .footer         { background: rgba(0, 0, 0, 0.96); }
+    input, textarea { background: rgba(40, 40, 44, 0.97); }
+
+    body.light-mode .glass          { background: rgba(255, 255, 255, 0.97); }
+    body.light-mode .header         { background: rgba(245, 245, 247, 0.98); }
+    body.light-mode .footer         { background: rgba(245, 245, 247, 0.98); }
+    body.light-mode input,
+    body.light-mode textarea        { background: rgba(255, 255, 255, 0.98); }
+
+    @media (max-width: 768px) {
+        .mobile-nav {
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+            background: rgba(20, 20, 24, 0.97);
+        }
+        body.light-mode .mobile-nav {
+            background: rgba(248, 248, 252, 0.98);
+        }
+        .tab-indicator {
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+        }
+    }
+}
+
+/* ============================================================
+   ACCESSIBILITY — increased contrast
+   Near-solid surfaces with a defined, contrasting border.
+   ============================================================ */
+@media (prefers-contrast: more) {
+    :root {
+        --glass-border: rgba(255, 255, 255, 0.4);
+        --text-secondary: #d1d1d6;
+        --text-tertiary: #a1a1a6;
+    }
+
+    body.light-mode {
+        --glass-border: rgba(0, 0, 0, 0.35);
+        --text-secondary: #3a3a3c;
+        --text-tertiary: #1d1d1f;
+    }
+
+    .glass, .header, .footer, .mobile-nav,
+    input, textarea, .socials a, .skill-bar {
+        border-width: 1.5px;
+    }
+
+    .btn-primary {
+        outline: 1.5px solid rgba(255, 255, 255, 0.6);
+        outline-offset: -1.5px;
     }
 }
 
@@ -1233,10 +1357,16 @@ body.light-mode .timeline-marker {
 
 .timeline-content {
     padding: 24px 28px;
+    transition:
+        background 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform  0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
 }
 
 .timeline-content:hover {
     background: var(--glass-bg-hover);
+    transform: translateX(4px);
 }
 
 .timeline-header {
@@ -1351,9 +1481,12 @@ body.light-mode .timeline-marker {
     display: flex;
     gap: 18px;
     align-items: flex-start;
-    transition: background 0.3s ease, box-shadow 0.3s ease,
-                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    transition:
+        background 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform  0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity    0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
 }
 
 .achievement-card:hover {
