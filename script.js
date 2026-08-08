@@ -37,15 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
         if (themeLabel)  themeLabel.textContent = isLight ? "Dark Mode" : "Light Mode";
     }
 
-    /* Set on first load from system preference */
-    applyTheme(systemPref.matches);
+    /* Default: light mode; respect saved preference */
+    const savedTheme = localStorage.getItem("theme");
+    applyTheme(savedTheme !== null ? savedTheme === "light" : true);
 
-    /* Keep in sync when system preference changes */
-    systemPref.addEventListener("change", e => applyTheme(e.matches));
-
-    /* Manual override via toggle */
+    /* Manual override via toggle — persist choice */
     if (themeToggle) {
-        themeToggle.addEventListener("change", () => applyTheme(themeToggle.checked));
+        themeToggle.addEventListener("change", () => {
+            const isLight = themeToggle.checked;
+            applyTheme(isLight);
+            localStorage.setItem("theme", isLight ? "light" : "dark");
+        });
     }
 
     /* 
